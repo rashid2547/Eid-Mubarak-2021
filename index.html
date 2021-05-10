@@ -718,17 +718,17 @@ max-width: 400px;
     <div style="background: url(https://1.bp.blogspot.com/-lNt2L8ZS3_4/XekNPWJNo6I/AAAAAAAADJY/AjPbCvJS9_gcJ3Pzo0451L4VQ7ahGSv9wCLcBGAsYHQ/s320/RedGlitter.gif); background-color: black; color: white; font-weight: bold; padding-top: 6px; padding-bottom: 6px; font-size: large;text-align:center; "> 
      <h2 class="font-effect-neon" align="center&quot;" id="TECHNOVEDANT-show-name"></h2> 
     </div> 
-    <div style="background: url(https://2.bp.blogspot.com/-T_tXR3JA5mk/W5-lhCTz4jI/AAAAAAAACRc/nqUIwYh7dNc-llDLOKfY0837pxPaoqs7QCLcBGAs/s1600/Navratri%2Bfree%2Bfestival%2Bwishing%2Bwebsite%2Bscript%2Bfor%2Bblogger%2B2018%2Bpro%2Bscript%2Bdownload%2Band%2Bearn%2Bmoney%2Bstrip.png); background-color: black; color: white; font-weight: bold; padding-top: 6px; padding-bottom: 6px; font-size: large;text-align:center; "> 
+    <div onclick="play()" style="background: url(https://2.bp.blogspot.com/-T_tXR3JA5mk/W5-lhCTz4jI/AAAAAAAACRc/nqUIwYh7dNc-llDLOKfY0837pxPaoqs7QCLcBGAs/s1600/Navratri%2Bfree%2Bfestival%2Bwishing%2Bwebsite%2Bscript%2Bfor%2Bblogger%2B2018%2Bpro%2Bscript%2Bdownload%2Band%2Bearn%2Bmoney%2Bstrip.png); background-color: black; color: white; font-weight: bold; padding-top: 6px; padding-bottom: 6px; font-size: large;text-align:center; "> 
     </div> 
     <div class="font-effect-neon"> 
-     <p class="fromMessage" id="TECHNOVEDANT-fromMessage"></p> 
+     <p onclick="play()" class="fromMessage" id="TECHNOVEDANT-fromMessage"></p> 
     </div> 
     <center> 
-     <span style="color: #ffffff;">▁ ▂ ▄ ▅ ঈদ মোবাৰক ▅ ▄ ▂ ▁</span> 
+     <span style="color: #ffffff;"  onclick="play()">▁ ▂ ▄ ▅ ঈদ মোবাৰক ▅ ▄ ▂ ▁</span> 
     </center> 
     <br> 
     <center> 
-     <img src="1stmubarak.jpg" class="img-responsive" alt="TECHNOVEDANT" width="95%"> 
+     <img src="1stmubarak.jpg" onclick="play()" class="img-responsive" alt="TECHNOVEDANT" width="95%"> 
     </center> 
     <br> 
     <center> 
@@ -830,12 +830,6 @@ swal({
   text: "Made By Rashid 🌹🌹",
   icon: "success",
   button:"Continue",
-
-}),
-  play(){
-   function play() {
-        var audio = document.getElementById("music");
-        audio.play() ;
 });
 		   
 	
@@ -854,13 +848,13 @@ swal({
 	  
   function settime(){
 	var audio= document.getElementById("music");
-	audio.currentTime=20;
+	audio.currentTime=10;
 	audio.play();
 	setInterval(function(){
-		if(audio.currentTime>20){
+		if(audio.currentTime>10){
 			audio.pause();
 				}
-			},1000);
+			},500);
 		}                                               
                                                  
                                                  
