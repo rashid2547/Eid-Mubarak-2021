@@ -753,7 +753,7 @@ max-width: 400px;
                                    
                                    
       
-   <audio id="music" loop="false">
+   <audio id="music">
      <source src="eid.m4a" type="audio/mpeg"> Your browser does not support the audio element. 
     </audio> 
     <br>
@@ -799,7 +799,7 @@ max-width: 400px;
     
     <br> 
     <center> 
-     <iframe width="95%" height="315" src="https://www.youtube.com/embed/tpnyxWrb3ic" frameborder="0" allow="accelerometer; autoplay; onclick="pauseAudio()" encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+     <iframe width="95%" height="315" src="https://www.youtube.com/embed/tpnyxWrb3ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
     </center> 
     <br> 
     <center> 
@@ -842,18 +842,26 @@ swal({
                                   
                                   
    <script>
-                    
-     var x = document.getElementById("music"); 
-
-function pauseAudio() { 
-  x.pause(); 
-}                
-                    
+        
                     
 window.addEventListener("mouseover",play);
 window.addEventListener("click",play);
 function play() { document.getElementById("music").play();
-}</script>
+}
+  function settime(){
+	var audio= document.getElementById("music");
+	audio.currentTime=20;
+	audio.play();
+	setInterval(function(){
+		if(audio.currentTime>20){
+			audio.pause();
+				}
+			},1000);
+		}                                               
+                                                 
+                                                 
+                                                 
+                                                 </script>
     <script>
 var slideIndex = 0;
 showSlides();
