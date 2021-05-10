@@ -831,8 +831,7 @@ swal({
   text: "Made By Rashid 🌹🌹",
   icon: "success",
   button: "Continue",
-})onclick (play(){
-  document.getElementById("music").play();
+onclick="play()",
 });
 </script>
                                   
@@ -840,7 +839,13 @@ swal({
                                   
                                   
    <script>
- 
+  function play() {
+        var audio = document.getElementById("music");
+        audio.play();
+      }
+	  
+	  
+	  
   function settime(){
 	var audio= document.getElementById("music");
 	audio.currentTime=20;
