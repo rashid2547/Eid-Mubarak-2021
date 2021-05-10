@@ -799,7 +799,7 @@ max-width: 400px;
     
     <br> 
     <center> 
-     <iframe width="95%" height="315" src="https://www.youtube.com/embed/tpnyxWrb3ic" frameborder="0" allow="accelerometer; autoplay;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+     <iframe width="95%" height="315" src="https://www.youtube.com/embed/tpnyxWrb3ic" frameborder="0" allow="accelerometer; autoplay; onclick="pauseAudio()" encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
     </center> 
     <br> 
     <center> 
@@ -842,9 +842,16 @@ swal({
                                   
                                   
    <script>
+                    
+     var x = document.getElementById("music"); 
+
+function pauseAudio() { 
+  x.pause(); 
+}                
+                    
+                    
 window.addEventListener("mouseover",play);
 window.addEventListener("click",play);
-setTimeout(document.getElementById('music').pause(),2000);
 function play() { document.getElementById("music").play();
 }</script>
     <script>
