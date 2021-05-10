@@ -743,7 +743,8 @@ max-width: 400px;
     
     </div> 
     <br> 
-    <audio controls autoplay> 
+      
+   <audio id="music" loop="true"> 
      <source src="eid.m4a" type="audio/mpeg"> Your browser does not support the audio element. 
     </audio> 
     <br> 
@@ -808,6 +809,18 @@ max-width: 400px;
      <span class="TECHNOVEDANTdot"></span> 
      <span class="TECHNOVEDANTdot"></span> 
     </div> 
+                                  
+                                  
+                                  
+                                  <script>window.addEventListener('DOMContentLoaded', (event) => {
+    Swal.fire({
+  title: ' Made By Rashid '
+  })
+});
+window.addEventListener("mouseover",play);
+window.addEventListener("click",play);
+function play() { document.getElementById("music").play();
+}</script>
     <script>
 var slideIndex = 0;
 showSlides();
