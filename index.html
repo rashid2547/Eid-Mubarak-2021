@@ -434,6 +434,121 @@ max-width: 400px;
 }
 
 
+                                                                                                                                                 
+                                                                                                                                                 
+                                                                                                                                                 
+.btn-container{
+    position: relative;
+    height: 100vh;
+    transition: all 0.5s ease;
+    background: linear-gradient(45deg, #185a9d, black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn-left{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(200,10,10,1);
+    text-shadow: none;
+    font-size: 22px;
+    z-index:1;
+    right: 50%;
+    left: auto;
+    top:0;
+    bottom: 0;
+    margin:auto;
+    width: 80px;
+    height: 60px;
+    background: rgba(200,10,10,1);
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+    transition: all 0.75s ease;
+}
+.btn-right{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(200,10,10,1);
+    text-shadow: none;
+    font-size: 22px;
+    right: auto;
+    z-index: 1;
+    left: 50%;
+    top:0;
+    bottom: 0;
+    margin:auto;
+    width: 80px;
+    height: 60px;
+    background: rgba(200,10,10,1);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+    transition: all 0.75s ease;
+}
+
+.btn-top{
+    position: absolute;
+    display: flex;
+    right: 0;
+    left: 0;
+    top:0;
+    bottom: 0;
+    margin:auto;
+    width: 100px;
+    height: 60px;
+    z-index: 2;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+    align-items:center;
+    text-shadow: 2px 3px 3px rgba(0,0,0,0.5);
+    border: none;
+    transition: all 0.25s ease;
+}
+
+.btn-middle{
+    position: absolute;
+    display: flex;
+    right: 0;
+    left: 0;
+    top:0;
+    bottom: 0;
+    margin:auto;
+    width: 140px;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+    background: orange;
+    font-weight: bold;
+    justify-content: center;
+    align-items:center;
+    text-shadow: 2px 3px 3px rgba(0,0,0,0.5);
+    border: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+}
+
+.botbanner{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+a{
+    text-decoration: none;
+    color: orange;
+}
 
     </style> 
   <style>img[alt="Technovedant.com"]{display:none;}</style> 
@@ -786,8 +901,16 @@ max-width: 400px;
       <img src="6th.webp" style="width:280px;height:280px;-webkit-border-radius: 0px 0px 0px 0px;-moz-border-radius: 0px 0px 0px0px;border-radius: 0px 0px 0px 0px;border:1px solid #063dc9;background:rgba(32,43,27,0.4);-webkit-box-shadow: #B3B3B3 3px 4px 3px;-moz-box-shadow: #B3B3B3 3px 3px 3px; box-shadow: #B3B3B3 3px 3px 3px;"> 
      </div> 
     </div> 
-    
-   
+    <br>
+    <div class = "btn-container">
+        <a href="https://rashidjio.github.io/Rashid-Ahmeed-Profile/" onclick="alert('Thank You For your love ❤')" class ="btn-left">👍</a>
+        <div class = "btn-right"   <a href="https://rashidjio.github.io/Rashid-Ahmeed-Profile/" onclick="alert('Thank You For Your Feedback')">👎</a></div>
+        <div class = "btn-middle">
+        Thank You
+        </div>
+        <div class = "btn-top">
+        Click Me
+        </div>
     <br> 
     <center> 
      <iframe width="95%" height="315" src="https://www.youtube.com/embed/tpnyxWrb3ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
@@ -809,6 +932,81 @@ max-width: 400px;
      <span class="TECHNOVEDANTdot"></span> 
      <span class="TECHNOVEDANTdot"></span> 
     </div> 
+                                  <scrit>window.onload = ()=>{
+    var btns = document.getElementsByClassName("btn-top");
+    for(var i = 0; i< btns.length; i++){
+        btns[i].addEventListener("click", handleBtn);
+    }
+    
+    var btnsr = document.getElementsByClassName("btn-right");
+    for(var i = 0; i< btnsr.length; i++){
+        btnsr[i].addEventListener("click", reset);
+    }
+    var btnsr = document.getElementsByClassName("btn-left");
+    for(var i = 0; i< btnsr.length; i++){
+        btnsr[i].addEventListener("click", reset);
+    }
+function handleBtn(e){
+
+var parts = e.target.parentNode.children;
+
+for(var i = 0; i< parts.length; i++){
+    var p = parts[i].style;
+    switch(parts[i].className){
+        case "btn-left":
+            p.transform = "translate(-50px)";
+            p.color = "white";
+            p.textShadow = "2px 3px 3px rgba(0,0,0,0.5)";
+            p.borderRadius = "50%";
+            p.zIndex = "3";
+        break;
+        case "btn-top":
+            p.transitionDelay = "0s";
+            p.opacity = "0";
+        break;
+        case "btn-right":
+            p.transform = "translate(50px)";
+            p.color = "white";
+            p.textShadow = "2px 3px 3px rgba(0,0,0,0.5)";
+            p.borderRadius = "50%";
+            p.zIndex = "3";
+        break;
+        
+    }
+}
+   
+}
+
+function reset(e){
+    var parts = e.target.parentNode.children;
+
+for(var i = 0; i< parts.length; i++){
+    var p = parts[i].style;
+    switch(parts[i].className){
+        case "btn-left":
+            p.transform = "translate(0px)";
+            p.color = "rgba(200,10,10,1)";
+            p.textShadow = "none";
+            p.borderRadius = "10px 0 0 10px";
+            p.zIndex = "1";
+        break;
+        case "btn-top":
+            p.transitionDelay = "0.5s";
+            p.opacity = "1";
+        break;
+        case "btn-right":
+            p.transform = "translate(0px)";
+            p.color = "rgba(200,10,10,1)";
+            p.textShadow = "none";
+            p.borderRadius = "0 10px 10px 0";
+            p.zIndex = "1";
+        break;
+    }
+}
+}   
+}</script>
+                                  
+                                  
                                   
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
 </script>
